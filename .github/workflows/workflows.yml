@@ -22,7 +22,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest > result.log
+          pytest test_app.py > results.log
 
       - name: Dummy Linting
         run: |
