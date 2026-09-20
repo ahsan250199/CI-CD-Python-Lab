@@ -21,8 +21,10 @@ jobs:
           pip install pytest
 
       - name: Run tests
+        shell: bash
         run: |
-          pytest test_app.py > results.log
+          set -o pipefail
+          pytest test_app.py | tee results.log
 
       - name: Dummy Linting
         run: |
